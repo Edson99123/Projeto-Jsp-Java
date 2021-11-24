@@ -9,7 +9,8 @@ public class ModelLogin implements Serializable {
 	private String login;
 	private String senha;
 	
-	
+	/**
+	 * Get and setters da classe*/
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
@@ -25,6 +26,5 @@ public class ModelLogin implements Serializable {
 	public void setLogin(String login) {
 		this.login = login;
 	}
-	
 }
 
