@@ -65,7 +65,7 @@ h1 {
 		    </div>
 		    </div>
 		    <div class="valid-feedback">  </div>
-		</div>
+		
 
 
 		<input class="btn btn-primary" type="submit" value="Enviar">
@@ -103,5 +103,7 @@ h1 {
 	    })
 	})()
 	</script>
+	
 </body>
+
 </html>
