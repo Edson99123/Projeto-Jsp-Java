@@ -25,6 +25,7 @@ public class ServletLogin extends HttpServlet {
 	/* Recebe os dados pela url em parametros */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		doPost(request, response);
 
 	}
 
@@ -57,13 +58,13 @@ public class ServletLogin extends HttpServlet {
 
 				} else {
 					RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
-					request.setAttribute("msg", "Informe ou login e senha corretamente!");
+					request.setAttribute("msg", "Informe login e senha corretamente!");
 					redirecionar.forward(request, response);
 				}
 
 			} else {
 				RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
-				request.setAttribute("msg", "Informe ou login e senha corretamente!");
+				request.setAttribute("msg", "Informe login e senha corretamente!");
 				redirecionar.forward(request, response);
 			}
 
