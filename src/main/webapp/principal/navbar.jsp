@@ -4,6 +4,7 @@
               <nav class="navbar header-navbar pcoded-header">
               <div class="navbar-wrapper">
               
+              
                   <div class="navbar-logo">
                       <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
                           <i class="ti-menu"></i>
@@ -25,7 +26,7 @@
                       <a class="mobile-options waves-effect waves-light">
                           <i class="ti-more"></i>
                       </a>
-                  </div> 
+                  </div>
                 
                   <div class="navbar-container container-fluid">
                       <ul class="nav-left">
@@ -93,10 +94,10 @@
                               </ul>
                           </li>
                           
-                          <!-- <li class="user-profile header-notification">
+                          <li class="user-profile header-notification">
                               <a href="#!" class="waves-effect waves-light">
-                                  <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                  <span>John Doe</span>
+                                  <!--  <img src="assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">  -->
+                                  <span>Ações</span>
                                   <i class="ti-angle-down"></i>
                               </a>
                               <ul class="show-notification profile-notification">
@@ -105,6 +106,8 @@
                                           <i class="ti-settings"></i> Settings
                                       </a>
                                   </li>
+                                  
+                                  <!-- 
                                   <li class="waves-effect waves-light">
                                       <a href="user-profile.html">
                                           <i class="ti-user"></i> Profile
@@ -119,14 +122,15 @@
                                       <a href="auth-lock-screen.html">
                                           <i class="ti-lock"></i> Lock Screen
                                       </a>
-                                  </li>
+                                  </li> -->
+                                  
                                   <li class="waves-effect waves-light">
-                                      <a href="auth-normal-sign-in.html">
+                                      <a href="ServletLogin?acao=logout"> <!-- Logout do sistema -->
                                           <i class="ti-layout-sidebar-left"></i> Logout
                                       </a>
                                   </li>
                               </ul>
-                          </li>  -->
+                          </li>
                           
                       </ul>
                   </div>
