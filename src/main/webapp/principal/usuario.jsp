@@ -41,29 +41,43 @@
 													<div class="card-block">
 														<h4 class="sub-title">Cad. Usuário</h4>
 
-														 <form class="form-material">
-                                                            <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" readonly="readonly" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">ID:</label>
-                                                            </div>
-                                                            <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="Nome" required=""  >
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Nome:</label>
-                                                            </div>
-                                                            <div class="form-group form-default form-static-label">
-                                                                <input type="text" name="footer-email" class="form-control" placeholder="E-mail" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">E-mail:</label>
-                                                            </div>
-                                                            <div class="form-group form-default form-static-label">
-                                                                <input type="password" name="footer-email" class="form-control"  placeholder="Senha" required="">
-                                                                <span class="form-bar"></span>
-                                                                <label class="float-label">Password</label>
-                                                            </div>
-                                                           
-                                                         <button class="btn btn-primary waves-effect waves-light">Primary Button</button>
+														 <form class="form-material"  action="<%= request.getContextPath() %>/ServletUsuarioController" method="post">
+	                                                            <div class="form-group form-default form-static-label">
+	                                                                <input 	type="number" name="id" id="id" class="form-control" 
+	                                                                		readonly="readonly">
+	                                                                <span class="form-bar"></span>
+	                                                                <label class="float-label">ID:</label>
+	                                                            </div>
+	                                                            
+	                                                            <div class="form-group form-default form-static-label">
+	                                                                <input 	type="text" name="nome" id="nome" class="form-control" 
+	                                                                		placeholder="Nome" required="required">
+	                                                                <span class="form-bar"></span>
+	                                                                <label class="float-label">Nome:</label>
+	                                                            </div>
+	                                                            <div class="form-group form-default form-static-label">
+	                                                                <input 	type="email" name="email" id="email" class="form-control" 
+	                                                                		placeholder="E-mail" autocomplete="off" required="required">
+	                                                                <span class="form-bar"></span>
+	                                                                <label class="float-label">E-mail:</label>
+	                                                            </div>
+	                                                            
+	                                                             <div class="form-group form-default form-static-label">
+	                                                                <input 	type="text" name="login" id="login" class="form-control" required="required" autocomplete="off">
+	                                                                <span class="form-bar"></span>
+	                                                                <label class="float-label">Login</label>
+	                                                            </div>
+	
+	                                                            <div class="form-group form-default form-static-label">
+	                                                                <input 	type="password" name="senha" id="senha" class="form-control" required="required" autocomplete="off">
+	                                                                <span class="form-bar"></span>
+	                                                                <label class="float-label">Senha</label>
+	                                                            </div>
+	                                                           
+	                                                              	<button class="btn btn-primary waves-effect waves-light">Novo</button>
+														            <button class="btn btn-success waves-effect waves-light">Salvar</button>
+														            <button class="btn btn-info waves-effect waves-light">Excluir</button>
+													          
                                                         </form>
                                                         
 													</div>

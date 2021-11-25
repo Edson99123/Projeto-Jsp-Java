@@ -61,7 +61,7 @@ h1 {
 
 		<div class="mb-3">
 			<label class="form-label" for="senha">Senha</label> 
-			<input class="form-control" id="senha" name="senha" type="password" required="required">
+			<input class="form-control" id="senha" name="senha" type="password" required="required" autocomplete="off">
 			<div class="invalid-feedback">
 		      Informe senha
 		    </div>
