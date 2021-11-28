@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.sun.net.httpserver.Authenticator.Result;
-
 import connection.SingleConnectionBanco;
 import model.ModelLogin;
 
@@ -47,9 +45,18 @@ public class DAOUsuarioRepository {
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setNome(resultado.getString("nome"));
-		}
-			
+		}		
 		return modelLogin;
 	}
 	
+	public boolean validarLogin(String login) throws Exception{
+		String sql = "select count(1) > 0 as existe from model_login where upper(login) = upper('"+login+"');";
+		
+		PreparedStatement statement = connection.prepareStatement(sql);
+		
+		ResultSet resultado = statement.executeQuery();
+		
+		resultado.next(); /*Pra ele entrar nos resultados*/
+		return resultado.getBoolean("existe");	
+	}
 }
