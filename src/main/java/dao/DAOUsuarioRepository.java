@@ -17,17 +17,34 @@ public class DAOUsuarioRepository {
 	}
 	
 	public ModelLogin gravarUsuario(ModelLogin objeto) throws Exception {
+		
+		if(objeto.isNovo()) {/*Grava um novo user*/
 				
 		String sql =  "INSERT INTO model_login(login, senha, nome, email) VALUES (?, ?, ?, ?);";
-		PreparedStatement prepareSql = connection.prepareStatement(sql);
+		PreparedStatement preparedSql = connection.prepareStatement(sql);
 		
-		prepareSql.setString(1, objeto.getLogin());
-		prepareSql.setString(2, objeto.getSenha());
-		prepareSql.setString(3, objeto.getNome());
-		prepareSql.setString(4, objeto.getEmail());
+		preparedSql.setString(1, objeto.getLogin());
+		preparedSql.setString(2, objeto.getSenha());
+		preparedSql.setString(3, objeto.getNome());
+		preparedSql.setString(4, objeto.getEmail());
 		
-		prepareSql.execute();
+		preparedSql.execute();
 		connection.commit();
+		
+		}else {
+			String SQL_UPDATE = "UPDATE model_login SET login=?, senha=?, nome=?, email=? WHERE id = "+objeto.getId()+";";
+			
+			PreparedStatement prepareSql = connection.prepareStatement(SQL_UPDATE);
+			
+			prepareSql.setString(1, objeto.getLogin());
+			prepareSql.setString(2, objeto.getSenha());
+			prepareSql.setString(3, objeto.getNome());
+			prepareSql.setString(4, objeto.getEmail());
+			
+			prepareSql.executeUpdate();/*executa update*/
+			connection.commit();
+			
+		}
 		return this.consultaUsuario(objeto.getLogin());
 	}
 	
@@ -59,4 +76,6 @@ public class DAOUsuarioRepository {
 		resultado.next(); /*Pra ele entrar nos resultados*/
 		return resultado.getBoolean("existe");	
 	}
+	
+	
 }
