@@ -108,9 +108,13 @@
 	<script type="text/javascript">
 	
 	function criarDelete() {
+		
+		if(confirm('Deseja excluir os dados?')){/*Confirmar antes de executar*/
+		
 		document.getElementById("formUser").method = "get";
 		document.getElementById("acao").value = "deletar";
 		document.getElementById("formUser").submit();
+		}
 	}
 	
 	function limparForm() {
